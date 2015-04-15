@@ -25,13 +25,36 @@
           <h2>relieve</h2>
           <h6>The Peace of Mind Social Network</h6>
 
-          <br><a class="waves-effect white-text blue waves-teal btn-flat">Get Started</a>
-          
-          
+          <br><a class="waves-effect white-text blue waves-teal btn-flat btn modal-trigger" href="#modal1">Login</a>
+
         </div>
       </div>
 
     </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row center">
+          
+        <div class="s6">
+          <img src="user.jpg"> <br>
+          User
+        </div>
+        <br>
+        <hr style="border-color:#fbfbfb;">
+        <br>
+        <div class="s6">
+          <img src="reliever.jpg"> <br>
+          Reliever
+        </div>
+         
+      </div>
+
+      
+    </div>
+    
   </div>
 
   <footer class="page-footer white">
@@ -63,6 +86,13 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+
+  <script>
+     $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
 
   </body>
 </html>
