@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>Parallax Template - Materialize</title>
+
+        <!-- CSS  -->
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- google+ script -->
+        <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    </head>
+    <body>
+
+
+
+    <div class="container">
+    <div class="section">
+
+    <div class="row">
+    <div class="col s12 center">
+    <br><br>
+
+    <h3>Login</h3><br>
+
+
+    <b>Login as User</b>
+    <span id="signinButton">
+        <span
+            class="g-signin"
+            data-callback="signinCallback"
+            data-clientid="741873716716-tct801d9u8j0r9kkrh4lvvr6nelloavu.apps.googleusercontent.com"
+            data-cookiepolicy="single_host_origin"
+            data-requestvisibleactions="http://schema.org/AddAction"
+            data-scope="profile">
+        </span>
+    </span>
+    <br><a class="waves-effect white-text  red lighten-1 btn-flat" href="user_home.html">Login with Google+</a>
+    <br><p style:"font-size:2px;">You're competely anonymous, dont be shy to tell your personal problems</p>
+
+    <br>
+
+    <b>Login as Reliever</b>
+    <br><a class="waves-effect white-text  red lighten-1 btn-flat" href="#modal1">Login with Google+</a>
+    <br><p style:"font-size:2px;">Support another people as Reliever and get your Wisdom point </p>
+
+
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <footer class="page-footer white">
+    <div class="container">
+    <div class="row">
+    <div class="col 20 s12">
+    <h5 class="black-text"></h5>
+    <center>
+    <a href="#"><p class="black-text text-lighten-4">What is User and Reliever ?</p></a>
+    </center>
+
+
+    </div>
+
+    </div>
+    </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+    });
+
+    function signinCallback(authResult) {
+        if (authResult['status']['signed_in']) {
+            // Update the app to reflect a signed in user
+            // Hide the sign-in button now that the user is authorized, for example:
+            document.getElementById('signinButton').setAttribute('style', 'display: none');
+            } else {
+            // Update the app to reflect a signed out user
+            // Possible error values:
+            //   "user_signed_out" - User is signed-out
+            //   "access_denied" - User denied access to your app
+            //   "immediate_failed" - Could not automatically log in the user
+            console.log('Sign-in state: ' + authResult['error']);
+        }
+    }
+
+    </script>
+
+    </body>
+</html>
